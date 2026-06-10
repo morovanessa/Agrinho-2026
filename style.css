@@ -1,0 +1,251 @@
+/* Configurações Gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f4f7f5;
+    color: #2c3e50;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Cabeçalho */
+header {
+    background: linear-gradient(135deg, #1e5631, #4c9a2a);
+    color: white;
+    padding: 30px 20px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.header-container h1 {
+    font-size: 2.5rem;
+    margin-bottom: 5px;
+}
+
+.slogan {
+    font-style: italic;
+    opacity: 0.9;
+}
+
+.badge-agrinho {
+    display: inline-block;
+    background-color: #f39c12;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-weight: bold;
+    margin-top: 10px;
+    font-size: 0.85rem;
+}
+
+/* Dashboard de Pontuação */
+.dashboard {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: -20px;
+    margin-bottom: 30px;
+}
+
+.card-status {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    border-bottom: 5px solid #bdc3c7;
+    transition: transform 0.3s ease;
+}
+
+.card-status h3 {
+    font-size: 1rem;
+    color: #7f8c8d;
+    margin-bottom: 5px;
+}
+
+.card-status p {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+#card-equilibrio {
+    background-color: #e8f5e9;
+    border-bottom-color: #27ae60;
+}
+
+/* Área de Jogo e Controles */
+.jogo-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    margin-bottom: 30px;
+}
+
+@media(max-width: 768px) {
+    .jogo-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+.controles h2 {
+    color: #1e5631;
+    margin-bottom: 10px;
+}
+
+.botoes-acao {
+    display: flex;
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.btn {
+    flex: 1;
+    padding: 12px;
+    border: 2px solid #bdc3c7;
+    border-radius: 8px;
+    background: white;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.btn:hover {
+    background-color: #f8f9fa;
+}
+
+#btn-lavoura.active {
+    background-color: #f1c40f;
+    border-color: #d68910;
+    color: #5d4037;
+}
+
+#btn-reflorestar.active {
+    background-color: #2ecc71;
+    border-color: #27ae60;
+    color: white;
+}
+
+.contador-arvores {
+    background: #f4f7f5;
+    padding: 10px 15px;
+    border-radius: 6px;
+    display: inline-block;
+}
+
+/* O Mapa da Fazenda (Grid) */
+.mapa-fazenda {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 8px;
+    aspect-ratio: 1 / 1;
+    background-color: #eaedd0;
+    padding: 10px;
+    border-radius: 10px;
+    border: 4px solid #d4ac0d;
+}
+
+.lote {
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: inset 0 0 5px rgba(0,0,0,0.1);
+}
+
+.lote:hover {
+    transform: scale(1.05);
+    filter: brightness(0.9);
+}
+
+/* Estados visuais do Lote de terra */
+.terra-nua {
+    background-color: #d7ccc8; /* Marrom acinzentado/degradado */
+    border: 2px dashed #a1887f;
+}
+
+.lavoura {
+    background-color: #f4d03f; /* Amarelo milho/soja */
+    border: 2px solid #f1c40f;
+    position: relative;
+}
+
+.floresta {
+    background-color: #27ae60; /* Verde árvore */
+    border: 2px solid #1e5631;
+}
+
+/* Alertas Educativos */
+#pop-up-educativo {
+    background-color: #d4edda;
+    color: #155724;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    border-left: 5px solid #28a745;
+    animation: fadeStyle 0.5s ease-in-out;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* Seção Informativa Inferior */
+.info-sustentavel {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.info-sustentavel h2 {
+    color: #1e5631;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.info-item {
+    background: #fdfefe;
+    padding: 15px;
+    border-radius: 6px;
+    border-top: 4px solid #4c9a2a;
+}
+
+.info-item h4 {
+    color: #2c3e50;
+    margin-bottom: 8px;
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #7f8c8d;
+    font-size: 0.9rem;
+    margin-top: 40px;
+}
+
+@keyframes fadeStyle {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}

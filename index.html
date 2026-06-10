@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoCultivo: O Jogo do Reflorestamento Sustentável</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="header-container">
+            <h1>EcoCultivo</h1>
+            <p class="slogan">Agro forte, futuro sustentável: equilíbrio entre produção e meio ambiente</p>
+            <span class="badge-agrinho">Agrinho 2026</span>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="dashboard">
+            <div class="card-status">
+                <h3>Produção Agrícola</h3>
+                <p id="txt-producao"><span id="val-producao">0</span>%</p>
+            </div>
+            <div class="card-status">
+                <h3>Área Reflorestada</h3>
+                <p id="txt-reflorestamento"><span id="val-reflorestamento">0</span>%</p>
+            </div>
+            <div class="card-status" id="card-equilibrio">
+                <h3>Equilíbrio Ecológico</h3>
+                <p id="txt-equilibrio"><span id="val-equilibrio">0</span>/100</p>
+            </div>
+        </section>
+
+        <div id="pop-up-educativo" class="hidden">
+            <p id="texto-alerta">Dica sustentável aparecerá aqui!</p>
+        </div>
+
+        <section class="jogo-container">
+            <div class="controles">
+                <h2>Gerenciar Fazenda</h2>
+                <p>Selecione uma ação e clique em um lote de terra degradada no mapa:</p>
+                
+                <div class="botoes-acao">
+                    <button id="btn-lavoura" class="btn active">🌾 Plantar Lavoura</button>
+                    <button id="btn-reflorestar" class="btn">🌳 Reflorestar</button>
+                </div>
+
+                <div class="contador-arvores">
+                    <p>🌳 Árvores Plantadas: <strong id="total-arvores">0</strong></p>
+                </div>
+            </div>
+
+            <div class="mapa-fazenda" id="mapa">
+                <div class="lote terra-nua" data-id="1"></div>
+                <div class="lote terra-nua" data-id="2"></div>
+                <div class="lote terra-nua" data-id="3"></div>
+                <div class="lote terra-nua" data-id="4"></div>
+                <div class="lote terra-nua" data-id="5"></div>
+                <div class="lote terra-nua" data-id="6"></div>
+                <div class="lote terra-nua" data-id="7"></div>
+                <div class="lote terra-nua" data-id="8"></div>
+                <div class="lote terra-nua" data-id="9"></div>
+                <div class="lote terra-nua" data-id="10"></div>
+                <div class="lote terra-nua" data-id="11"></div>
+                <div class="lote terra-nua" data-id="12"></div>
+                <div class="lote terra-nua" data-id="13"></div>
+                <div class="lote terra-nua" data-id="14"></div>
+                <div class="lote terra-nua" data-id="15"></div>
+                <div class="lote terra-nua" data-id="16"></div>
+            </div>
+        </section>
+
+        <section class="info-sustentavel">
+            <h2>Por que buscar o equilíbrio?</h2>
+            <div class="info-grid">
+                <div class="info-item">
+                    <h4>Proteção de Nascentes</h4>
+                    <p>O reflorestamento nas margens de rios evita o assoreamento e garante água limpa para a própria lavoura.</p>
+                </div>
+                <div class="info-item">
+                    <h4>Conservação do Solo</h4>
+                    <p>Raízes das árvores protegem a terra contra a erosão provocada pelas chuvas fortes, mantendo os nutrientes.</p>
+                </div>
+                <div class="info-item">
+                    <h4>Créditos de Carbono</h4>
+                    <p>Árvores absorvem CO₂ da atmosfera. Fazendas sustentáveis geram valor extra ajudando a combater o efeito estufa.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 EcoCultivo - Projeto desenvolvido para o Concurso Agrinho.</p>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
